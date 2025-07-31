@@ -338,3 +338,9 @@ if st.sidebar.button("Run Evaluation"):
     - For FAQ chatbots, the primary goal is accurate intent classification,
       which directly leads to the correct pre-defined answer.
     """)
+
+streamlit
+scikit-learn
+numpy
+nltk
+rouge_score
