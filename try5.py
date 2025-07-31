@@ -14,11 +14,8 @@ import nltk
 # Download NLTK punkt tokenizer for sentence tokenization if not already downloaded
 try:
     nltk.data.find('tokenizers/punkt')
-except LookupError: # Changed from nltk.downloader.DownloadError to LookupError
+except nltk.downloader.DownloadError:
     nltk.download('punkt')
-except Exception as e:
-    st.error(f"Error downloading NLTK 'punkt' tokenizer: {e}")
-
 
 # --- 1. Data Preprocessing ---
 
