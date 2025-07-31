@@ -1,5 +1,8 @@
 streamlit
+pandas
+transformers
+torch
 scikit-learn
-numpy
 nltk
-rouge_score
+rouge-score
+numpy
