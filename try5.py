@@ -14,8 +14,11 @@ import nltk
 # Download NLTK punkt tokenizer for sentence tokenization if not already downloaded
 try:
     nltk.data.find('tokenizers/punkt')
-except nltk.downloader.DownloadError:
+except LookupError: # Changed from nltk.downloader.DownloadError to LookupError
     nltk.download('punkt')
+except Exception as e:
+    st.error(f"Error downloading NLTK 'punkt' tokenizer: {e}")
+
 
 # --- 1. Data Preprocessing ---
 
@@ -338,9 +341,3 @@ if st.sidebar.button("Run Evaluation"):
     - For FAQ chatbots, the primary goal is accurate intent classification,
       which directly leads to the correct pre-defined answer.
     """)
-
-streamlit
-scikit-learn
-numpy
-nltk
-rouge_score
